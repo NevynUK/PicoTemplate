@@ -13,7 +13,6 @@ pico_sdk_init()
 
 add_executable(${PROJECT_NAME}
     src/main.cpp
-    src/assembler.S
 )
 
 pico_set_program_name(${PROJECT_NAME} "projectname")
