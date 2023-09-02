@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 
-#define ONBOARD_LED 16
+#define ONBOARD_LED 25
 
 int main()
 {
