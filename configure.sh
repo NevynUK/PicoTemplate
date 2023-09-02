@@ -34,24 +34,12 @@ if [ -z "$PROJECT_NAME" ]; then
     exit 1
 fi
 
-SED_OPTIONS=
-case "$(uname -s)" in
-    Darwin)
-      SED_OPTIONS="-i ''"
-      ;;
-    Linux|CYGWIN*|MINGW32*|MSYS*|MINGW*)
-      SED_OPTIONS="-i"
-      ;;
-    *)
-      echo "Operating system not recognised."
-      exit 0
-      ;;
-esac
-
 #
 #   Change the project and binary file names in CMakeLists.txt and flash.sh
 #
-sed $SED_OPTIONS "s/projectname/$PROJECT_NAME/g" $SCRIPT_DIR/CMakeLists.txt
-sed $SED_OPTIONS "s/projectname/$PROJECT_NAME/g" $SCRIPT_DIR/flash.sh
+sed -i.bak "s/projectname/$PROJECT_NAME/g" $SCRIPT_DIR/CMakeLists.txt
+sed -i.bak "s/projectname/$PROJECT_NAME/g" $SCRIPT_DIR/flash.sh
+
+rm *.bak
 
 cmake -S . -B $SCRIPT_DIR/build
