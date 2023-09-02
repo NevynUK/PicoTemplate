@@ -39,7 +39,9 @@ fi
 #
 sed -i.bak "s/projectname/$PROJECT_NAME/g" $SCRIPT_DIR/CMakeLists.txt
 sed -i.bak "s/projectname/$PROJECT_NAME/g" $SCRIPT_DIR/flash.sh
+sed -i.bak "s/projectname/$PROJECT_NAME/g" $SCRIPT_DIR/.vscode/launch.json
 
-rm *.bak
+rm $SCRIPT_DIR/*.bak
+rm $SCRIPT_DIR/.vscode/*.bak
 
 cmake -S . -B $SCRIPT_DIR/build
