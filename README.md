@@ -38,4 +38,14 @@ The application binary can be written to the board using the `flash.sh` script. 
 
 ## Debugging
 
-Debugging support is available through VS Code.  The build script can build a debug version of the code using the command `build.sh --debug`.  This configuration will be used when using VS Code as a debug environment.
+Debugging support is available through VS Code.  The build script can build a debug version of the code using the command `build.sh --debug`.  This configuration can be used when using VS Code as a debug environment.  For more information on the background see:
+
+* [Debugging NuttX on the Raspberry Pi Pico](https://blog.mark-stevens.co.uk/2023/06/debugging-nuttx-on-the-raspberry-pi-pico/)
+* [VSCode Debugging with NuttX and Raspberry Pi PicoW](https://blog.mark-stevens.co.uk/2023/06/vscode-debugging-with-nuttx-and-raspberry-pi-picow/)
+
+## Acknowledgements
+
+This repository has been inspired by several others on github:
+
+[Raspberry Pi Pico Examples](https://github.com/raspberrypi/pico-examples)
+[Raspberry Pi Pico Template](https://github.com/cathiele/raspberrypi-pico-cpp-template)
