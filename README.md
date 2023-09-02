@@ -7,8 +7,8 @@ This repository contains a template Raspberry Pi Pico project along with some sh
 It is assumed that the Pico SDK is installed along with OpenOCD for the Raspberry Pi Pico.  The SDK and OpenOCD should be installed at the same level in order for the flash scripts to be used unmodified.  So the directory structure should look something link:
 
 | Pi-Pico
-+--- Pico-SDK
-+--- OpenOCD
+|--- Pico-SDK
+|--- OpenOCD
 
 where `PICO_SDK_PATH` has been set to `Pi-Pico/Pico-SDK`
 
