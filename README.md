@@ -2,7 +2,7 @@
 
 This repository contains a template Raspberry Pi Pico project along with some shell scripts to build the project.
 
-![](https://badgen.net/badge/Repository/PicoTemplate/blue?icon=github)
+![Main Branch](https://github.com/nevynuk/PicoTemplate/actions/workflows/build.yml/badge.svg)
 
 ## Prerequisites
 
