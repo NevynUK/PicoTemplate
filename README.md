@@ -31,3 +31,7 @@ You can also force the system to be fully rebuilt by executing the command `./bu
 ## Flash the Board
 
 The application binary can be written to the board using the `flash.sh` script.  This will use the `openocd` application to write the compiled code to the Pico using a Pico set up as a debug probe.
+
+## Debugging
+
+Debugging support is available through VS Code.  The build script can build a debug version of the code using the command `build.sh --debug`.  This configuration will be used when using VS Code as a debug environment.
