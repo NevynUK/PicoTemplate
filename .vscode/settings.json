@@ -1,0 +1,9 @@
+{
+    "cortex-debug.openocdPath": "${env:PICO_SDK_PATH}/../openocd/src/openocd",
+    "cortex-debug.registerUseNaturalFormat": false,
+    "files.associations": {
+        "vector": "cpp"
+    },
+    "cSpell.words": [
+    ],
+}
