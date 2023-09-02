@@ -2,6 +2,8 @@
 
 This repository contains a template Raspberry Pi Pico project along with some shell scripts to build the project.
 
+![](https://badgen.net/badge/Repository/PicoTemplate/blue?icon=github)
+
 ## Prerequisites
 
 It is assumed that the Pico SDK is installed along with OpenOCD for the Raspberry Pi Pico.  The SDK and OpenOCD should be installed at the same level in order for the flash scripts to be used unmodified.  So the directory structure should look something link:
