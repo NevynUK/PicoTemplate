@@ -21,6 +21,17 @@ pico_set_program_version(${PROJECT_NAME} "0.1")
 target_link_libraries(${PROJECT_NAME} pico_stdlib)
 
 #
+#   Taken from the Pico examples.
+#
+add_compile_options(-Wall
+        -Wno-format          # int != int32_t as far as the compiler is concerned because gcc has int32_t as long int
+        -Wno-unused-function # we have some for the docs that aren't called
+        )
+if (CMAKE_C_COMPILER_ID STREQUAL "GNU")
+    add_compile_options(-Wno-maybe-uninitialized)
+endif()
+
+#
 #   Add additional libraries here, candidates include:
 #       hardware_spi, hardware_i2c, hardware_dma, hardware_pio, hardware_timer, hardware_watchdog, hardware_clocks
 #
