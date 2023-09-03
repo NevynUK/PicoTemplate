@@ -49,13 +49,13 @@ endif()
 #
 #   Uncomment the following two lines to enable serial over USB.
 #
-# pico_enable_stdio_usb(${PROJECT_NAME} 1)
-# pico_enable_stdio_uart(${PROJECT_NAME} 0)
+pico_enable_stdio_usb(${PROJECT_NAME} 1)
+pico_enable_stdio_uart(${PROJECT_NAME} 0)
 
 #
 #   Uncomment the following two lines to enable serial over GPIO UART.
 #
-pico_enable_stdio_usb(${PROJECT_NAME} 0)
-pico_enable_stdio_uart(${PROJECT_NAME} 1)
+# pico_enable_stdio_usb(${PROJECT_NAME} 0)
+# pico_enable_stdio_uart(${PROJECT_NAME} 1)
 
 pico_add_extra_outputs(${PROJECT_NAME})
