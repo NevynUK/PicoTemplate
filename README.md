@@ -1,8 +1,11 @@
 # PicoTemplate
 
-This repository contains a template Raspberry Pi Pico project along with some shell scripts to build the project.
-
 ![Main Branch](https://github.com/NevynUK/PicoTemplate/actions/workflows/build.yaml/badge.svg)
+
+This repository contains a template Raspberry Pi Pico project along with some shell scripts to build the project.  The default applications (both Pico and Pico W) perform the same actions:
+
+* Configure standard output to be sent over USB
+* Blink the on board LED
 
 ## Prerequisites
 
@@ -16,15 +19,26 @@ It is assumed that the Pico SDK is installed along with OpenOCD for the Raspberr
 
 where `PICO_SDK_PATH` has been set to `Pi-Pico/Pico-SDK`
 
-Instructions for the installation of the Pido SDK and OpenOCD can be found in the [Getting started with Raspberry Pi Pico](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf).
+Instructions for the installation of the Pico SDK and OpenOCD can be found in the [Getting started with Raspberry Pi Pico](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf).
 
 ## Configuring the Project
 
-By default, the system is configured with a simple GPIO example and will generate an application called `projectname`.  The first step is to configure the system and select a name for your project using the `configure.sh` script.  Execute the following command changing `MyProject` to the name of your application;
+By default, the system is configured with a simple GPIO example and will generate an application called `projectname`.  The first step is to configure the system and select a name for your project using the `configure.sh` script.  Execute the following command changing `MyProject` to the name of your application using the repository default board type (Pico):
 
 ```bash
 ./configure.sh --name=MyProject
 ```
+
+It is possible to change the board type using the `-b` or `--board` option:
+
+```bash
+./configure.sh --name=MyProject --board=picow
+```
+
+Two board types are supported:
+
+* pico
+* picow
 
 ## Building the Application
 
