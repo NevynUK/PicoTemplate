@@ -73,4 +73,4 @@ sed -i.bak "s/projectname/$PROJECT_NAME/g" $SCRIPT_DIR/.vscode/launch.json
 rm $SCRIPT_DIR/*.bak
 rm $SCRIPT_DIR/.vscode/*.bak
 
-cmake $CMAKE_FLAGS -S . -B $SCRIPT_DIR/build
+cmake $CMAKE_FLAGS -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -S . -B $SCRIPT_DIR/build

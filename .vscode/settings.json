@@ -7,4 +7,18 @@
     "cSpell.words": [
         "Pico"
     ],
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "C_Cpp.intelliSenseEngine": "Disabled",
+    "clangd.path": "/usr/bin/clangd",
+    "clangd.checkUpdates": false,
+    "clangd.restartAfterCrash": true,
+    "clangd.detectExtensionConflicts": true,
+    "clangd.arguments": [
+        "-log=verbose", 
+        "-pretty", 
+        "--background-index", 
+        "--query-driver=arm-none-eabi-gcc",
+        "--compile-commands-dir=${workspaceFolder}/build",
+        "--completion-style=detailed"
+    ],
 }
