@@ -32,6 +32,8 @@ RUN apt-get update --fix-missing \
         binutils-dev \
         libelf-dev \
         gcc-arm-none-eabi \
+        libnewlib-arm-none-eabi \
+        libstdc++-arm-none-eabi-newlib \
         binutils-arm-none-eabi \
         python3.10 \
         python3-distutils \
@@ -50,11 +52,10 @@ RUN apt-get update --fix-missing \
 #
 ARG llvm_version=15
 
-RUN apt-get update --fix-missing && apt-get -y upgrade
 RUN apt-get install -y --no-install-recommends \
-    clang-format-${llvm_version} \
-    clang-tidy-${llvm_version} \
-    clang-${llvm_version}
+        clang-format-${llvm_version} \
+        clang-tidy-${llvm_version} \
+        clang-${llvm_version}
 
 RUN ln -s /usr/bin/clang-${llvm_version} /usr/local/bin/clang
 RUN ln -s /usr/bin/clang-format-${llvm_version} /usr/local/bin/clang-format
