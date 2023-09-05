@@ -46,6 +46,21 @@ The application can be built by executing the command `./build.sh`.  At the end 
 
 You can also force the system to be fully rebuilt by executing the command `./build.sh --rebuild`.
 
+## Docker
+
+The system also supports building the system using a Docker container.  Two scripts are provided to support this:
+
+* `docker-build.sh`
+* `docker-run.sh`
+
+### docker-build.sh
+
+This file contains the command to build the docker container called `pico-build`.  This contains all of the assets needed to build a Pico project including the Pico SDK.
+
+### docker-run.sh
+
+This file starts the docker container in interactive mode, from there the system can be configured and built using the `configure.sh` and `build.sh` scripts.
+
 ## Flash the Board
 
 The application binary can be written to the board using the `flash.sh` script.  This will use the `openocd` application to write the compiled code to the Pico using a Pico set up as a debug probe.
